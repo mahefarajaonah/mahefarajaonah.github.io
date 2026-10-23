@@ -344,10 +344,10 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 8px)}
 .cert:first-child{padding-top:0}
 .cert__thumb{position:relative;display:block;aspect-ratio:3/2;border-radius:8px;overflow:hidden;border:1px solid var(--line-2);background:#fff;cursor:zoom-in;transition:border-color .2s,box-shadow .2s}
 .cert__thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .35s var(--ease)}
-.cert__thumb--empty{display:grid;place-items:center;cursor:default;background:var(--accent-soft);border-style:dashed;color:var(--accent);font:700 15px/1 var(--f-display);letter-spacing:.04em}
 .cert__name{font-family:var(--f-body);font-size:15px;font-weight:500;line-height:1.4}
 .cert__issuer{font-size:13px;color:var(--text-3);margin-top:2px}
 .cert__id{font-family:var(--f-mono);font-size:12px}
+.cert__result{font-size:13px;color:var(--text-2);margin-top:4px;line-height:1.45}
 .cert__date{font-family:var(--f-mono);font-size:11.5px;color:var(--accent);margin-top:6px}
 
 /* certificate peek inside a project card */
@@ -358,7 +358,7 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 8px)}
 .peek__label{position:absolute;left:12px;bottom:10px;z-index:1;display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--text)}
 .peek__label svg{width:14px;height:14px;color:var(--accent)}
 @media (hover:hover){
-  .cert__thumb:not(.cert__thumb--empty):hover,.peek:hover{border-color:var(--accent-line)}
+  .cert__thumb:hover,.peek:hover{border-color:var(--accent-line)}
   .cert__thumb:hover img,.peek:hover img{transform:scale(1.04)}
 }
 
@@ -673,11 +673,12 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 8px)}
             </div>
           </li>
           <li class="cert">
-            <div class="cert__thumb cert__thumb--empty" aria-hidden="true">TEF</div>
+            <a class="cert__thumb" href="assets/certificates/previews/tef-canada.jpg" data-viewer data-original="assets/certificates/TEF-Canada-Attestation-Mahefa-Rajaonah.pdf"><img src="assets/certificates/thumbs/tef-canada-1x.webp" srcset="assets/certificates/thumbs/tef-canada-2x.webp 2x, assets/certificates/thumbs/tef-canada-3x.webp 3x" alt="" width="144" height="96" loading="lazy" decoding="async"><span class="sr-only" data-i18n="viewCert">View certificate</span></a>
             <div class="cert__body">
-              <h3 data-i18n="c3" class="cert__name">TEF Canada, French C1 (NCLC 9)</h3>
+              <h3 data-i18n="c3" class="cert__name">TEF Canada, French</h3>
               <div class="cert__issuer">CCI Paris Île-de-France</div>
-              <div class="cert__date">C1 / B2</div>
+              <div data-i18n="c3r" class="cert__result">C1 (NCLC 9) reading, listening, writing · B2 (NCLC 7) speaking</div>
+              <div data-i18n="c3d" class="cert__date">SEP 2026 – SEP 2028</div>
             </div>
           </li>
         </ul>
@@ -871,13 +872,15 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 8px)}
 "c1d": "AVR 2026 – AVR 2031",
 "c2": "Lean Six Sigma, ceinture jaune",
 "c2d": "MARS 2026",
-"c3": "TEF Canada, français C1 (NCLC 9)",
+"c3": "TEF Canada, français",
 "mem": "Associations professionnelles <span>· depuis mars 2026</span>",
 "hContact": "Restons en contact",
 "contactP": "Ouvert aux postes de coordonnateur logistique et en supply chain partout en Ontario. Toujours partant pour échanger sur le domaine, même sans poste à pourvoir.",
 "gradeV": "4,78<span>/5</span>",
 "viewCert": "Voir le certificat",
-"openOriginal": "Ouvrir l'original"
+"openOriginal": "Ouvrir l'original",
+"c3r": "C1 (NCLC 9) en compréhension et à l'écrit · B2 (NCLC 7) à l'oral",
+"c3d": "SEPT 2026 – SEPT 2028"
 };
   const FR_ATTR = {"brandAria": "Mahefa Rajaonah, retour en haut", "navAria": "Principal", "imgAlt": "Portrait de Mahefa Rajaonah", "langAria": "Langue"};
   const UI = {
